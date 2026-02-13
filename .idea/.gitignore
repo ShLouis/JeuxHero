@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+/JeuxHero.iml
+/misc.xml
+/modules.xml
+/inspectionProfiles/Project_Default.xml
+/inspectionProfiles/profiles_settings.xml
+/vcs.xml
