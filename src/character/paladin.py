@@ -7,11 +7,11 @@ class Paladin(MeleeHero):
         super().__init__(name, max_health, base_damage, gold)
         self.shield = None
 
-    def equip_shied(self, shield: "Shield"):
+    def equip_shield(self, shield: "Shield"):
         self.shield = shield
         shield.is_equipped = True
 
-    def unequip_shied(self):
+    def unequip_shield(self):
         self.shield.is_equipped = False
         self.shield = None
 
@@ -21,3 +21,12 @@ class Paladin(MeleeHero):
             super().take_damage(damage_after_shield)
         else:
             super().take_damage(damage)
+
+    def get_stats(self) -> dict:
+        stats = super().get_stats()
+        stats["shield"] = {
+            "name": self.shield.name,
+            "defense": self.shield.defense_stat
+        } if self.shield else None
+
+        return stats
