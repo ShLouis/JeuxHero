@@ -6,3 +6,11 @@ class Hero(Character):
         super().__init__(name, max_health, base_damage, gold)
         self.inventory = Inventory()
         self.weapon = None
+
+
+    def attack(self, target: "Character"):
+        if self.weapon is not None:
+            target.take_damage(self.base_damage + self.weapon.damage_stat)
+        else:
+            target.take_damage(self.base_damage)
+
