@@ -19,5 +19,14 @@ class Character(ABC):
     def take_damage(self, amount: int):
         self.health_bar.lose_health(amount)
 
+    def get_stats(self) -> dict:
+        return {
+            "name": self.name,
+            "health": self.health_bar.health,
+            "base_damage": self.base_damage,
+            "gold": self.wallet.gold
+        }
+
+
 
 
