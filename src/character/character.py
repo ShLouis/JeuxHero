@@ -1,6 +1,6 @@
 from abc import ABC
-from healthBar import HealthBar
-from wallet import Wallet
+from src.character.healthBar import HealthBar
+from src.character.wallet import Wallet
 
 
 class Character(ABC):
