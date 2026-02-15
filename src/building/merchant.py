@@ -1,7 +1,7 @@
 from typing import List
-from building.building import Building
-from character.hero import Hero
-from item.item import Item
+from building import Building
+from src.character.hero import Hero
+from src.item.item import Item
 
 
 class Merchant(Building):
