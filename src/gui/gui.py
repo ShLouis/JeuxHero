@@ -14,7 +14,7 @@ class Gui:
         name = input("Enter your hero's name: ")
 
         hero_choice = None
-        Gui.clear_io()
+        Gui.clear()
         while hero_choice not in ["1", "2", "3"]:
             print("\nChoose your hero type:")
             print("0. View the Heros perks")
@@ -23,13 +23,13 @@ class Gui:
             print("3. Wizard")
             hero_choice = input("Choose your hero type: ")
             if hero_choice == "0":
-                Gui.clear_io()
+                Gui.clear()
                 Gui.show_hero_perks()
                 hero_choice = None
             elif hero_choice not in ["1", "2", "3"]:
-                Gui.clear_io()
+                Gui.clear()
                 print("Invalid choice! Please choose 1, 2, or 3.")
-        Gui.clear_io()
+        Gui.clear()
         return name, hero_choice
 
     @staticmethod
@@ -45,7 +45,7 @@ class Gui:
         print(" - 20% chance to dodge attacks")
 
     @staticmethod
-    def clear_io():
+    def clear():
         os.system("cls" if os.name == "nt" else "clear")
 
     @staticmethod

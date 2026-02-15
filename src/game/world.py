@@ -1,5 +1,5 @@
-from building.village import Village
-from character.hero import Hero
+from src.building.village import Village
+from src.character.hero import Hero
 
 
 class World:
@@ -10,7 +10,6 @@ class World:
             cls._instance = super(World, cls).__new__(cls)
         return cls._instance
 
-
-    def __init__(self,village: Village,hero: Hero):
+    def __init__(self, village: Village, hero: Hero):
         self.village = village
         self.hero = hero

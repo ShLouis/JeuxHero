@@ -1,10 +1,10 @@
 from typing import List
 
-from building.building import Building
-from building.enemySpwaner import EnemySpawner
-from building.levelManager import LevelManager
-from character.hero import Hero
-from character.monster import Monster
+from src.building.building import Building
+from src.building.enemySpwaner import EnemySpawner
+from src.building.levelManager import LevelManager
+from src.character.hero import Hero
+from src.character.monster import Monster
 
 
 class Mine(Building):
@@ -24,4 +24,3 @@ class Mine(Building):
         print(f"Current level: {current_level}")
         nb_monsters = self.level_manager.get_nb_monsters()
         print(f"number of monsters: {nb_monsters}")
-        self.monsters = self.spawner.spawn_enemies()
