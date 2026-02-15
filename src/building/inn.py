@@ -1,4 +1,4 @@
-from building.building import Building
+from src.building.building import Building
 
 
 class Inn(Building):
