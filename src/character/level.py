@@ -1,5 +1,8 @@
+from src.character.hero import Hero
+
+
 class Level:
-    def __init__(self, xp: int = 0, level: int = 1,owner: Hero):
+    def __init__(self, owner: Hero, xp: int = 0, level: int = 0):
         self.xp = xp
         self.level = level
         self.owner = owner
