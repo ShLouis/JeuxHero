@@ -1,4 +1,6 @@
 from abc import ABC
+
+from src.character.level import Level
 from src.character.healthBar import HealthBar
 from src.character.wallet import Wallet
 
@@ -9,6 +11,7 @@ class Character(ABC):
         self.health_bar = HealthBar(max_health)
         self.base_damage = base_damage
         self.wallet = Wallet(gold)
+        self.level = Level(self)
 
     def is_alive(self) -> bool:
         return not self.health_bar.is_empty()
