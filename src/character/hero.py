@@ -1,10 +1,12 @@
 from character import Character
+from character.manaBar import ManaBar
 from inventory import Inventory
 
 
 class Hero(Character):
     def __init__(self, name: str, max_health: int, base_damage: int, gold: int = 0):
         super().__init__(name, max_health, base_damage, gold)
+        self.mana_bar = ManaBar(100)
         self.inventory = Inventory()
         self.weapon = None
 
